@@ -13,4 +13,6 @@ Click above title to view site.
 | Semantic       | [source](https://react.semantic-ui.com/)|
 | React Router   | [source](https://reactrouter.com/en/main) |
 
+## Extras
 
+Logo - add link to just logo here
