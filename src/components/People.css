@@ -1,0 +1,43 @@
+.peopleList {
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+.peopleList > * {
+    flex: 1 1 200px;
+}
+
+.peopleListItem {
+    min-height: 250px;
+    margin: 1em;
+    padding-top: 1em;
+    border: 3px solid #ddd;
+    border-radius: 15px;
+}
+
+.peopleListItem > img {
+    max-width: 150px;
+}
+/*  staff list csss */
+.staffList {
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+.staffList > * {
+    flex: 1 1 200px;
+}
+
+.staffListItem {
+    min-height: 250px;
+    margin: 1em;
+    padding-top: 1em;
+    border: 3px solid #ddd;
+    border-radius: 15px;
+}
+
+.staffListItem > img {
+    max-width: 150px;
+}
