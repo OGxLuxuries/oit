@@ -9,7 +9,6 @@ import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 import Minors from './components/Minors/Minors.jsx';
 import Employment from './components/Employment/Employment.jsx'
-import Map from './components/Employment/Map.jsx'
 import ComingSoonPage from './components/ComingSoon/ComingSoon.jsx';
 
 export default function App() {
@@ -20,7 +19,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="degrees" element={<Degrees />} />
           <Route path="minors" element={<Minors />} />
-          <Route path="cs" element={<Map/>}></Route>
+          <Route path="cs" element={<ComingSoonPage/>}></Route>
           <Route path="employment" element={<Employment />} />
           <Route path="team" element={<Tabs />} />
           {/* these last four are bonus */}

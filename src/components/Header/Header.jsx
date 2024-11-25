@@ -17,7 +17,7 @@ const links = [
   },
   { link: "#employment", label: "Employment", links: [
     {link: "/employment", label: "See Outcomes"},
-    {link: "/map", label: "See Map"},
+    {link: "/cs", label: "See Map"},
     
   ]},
   { link: "/team", label: "Our Team" },
