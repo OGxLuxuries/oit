@@ -20,7 +20,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="degrees" element={<Degrees />} />
           <Route path="minors" element={<Minors />} />
-          <Route path="map" element={<Map/>}></Route>
+          <Route path="cs" element={<Map/>}></Route>
           <Route path="employment" element={<Employment />} />
           <Route path="team" element={<Tabs />} />
           {/* these last four are bonus */}
