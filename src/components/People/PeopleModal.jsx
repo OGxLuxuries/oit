@@ -4,6 +4,7 @@ import * as React from 'react';
 // import Typography from '@mui/material/Typography';
 // import Modal from '@mui/material/Modal';
 import {Modal, Box, Typography, Button} from '@mui/material';
+import './People.css';
 
 const style = {
   position: 'absolute',

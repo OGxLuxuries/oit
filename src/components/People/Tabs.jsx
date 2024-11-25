@@ -1,9 +1,8 @@
 import {useState, useEffect} from 'react'
 import { TabPane, Tab } from 'semantic-ui-react'
-import getData from '../utils/getData'
+import getData from '../../utils/getData.js'
 import PeopleGroup from './PeopleGroup'
 import './People.css'
-
 
 
 
@@ -13,8 +12,8 @@ const Tabs = () => {
   // go get data
 
   const panes = [
-    { menuItem: 'Faculty', render: () => <TabPane><PeopleGroup title="faculty" obj={peopleObj.faculty} /></TabPane> },
-    { menuItem: 'Staff', render: () => <TabPane><PeopleGroup title="staff" obj={peopleObj.staff} /></TabPane> },
+    { menuItem: 'Faculty', render: () => <TabPane><PeopleGroup title="faculty" obj={peopleObj?.faculty} /></TabPane> },
+    { menuItem: 'Staff', render: () => <TabPane><PeopleGroup title="staff" obj={peopleObj?.staff} /></TabPane> },
     
   ]
 
@@ -35,6 +34,8 @@ const Tabs = () => {
     <h1>{peopleObj.title}</h1>
     <h2>{peopleObj.subTitle}</h2>
     <Tab panes={panes} />
+    
+    
     </>
     
 

@@ -1,68 +1,35 @@
 // load stuff
 import './App.css'
-import getData from './utils/getData'
-import { useState, useEffect } from 'react'; 
-import About from './components/About.jsx';
-import Tabs from './components/Tabs.jsx'
-// my component
+import Layout from './Layout.jsx'
+import Home from './Home.jsx'
+import Degrees from './components/Degrees/Degrees.jsx'
+import { Routes, Route} from "react-router-dom";
+import Tabs from './components/People/Tabs.jsx'
+import '@mantine/core/styles.css';
+import { MantineProvider } from '@mantine/core';
+import Minors from './components/Minors/Minors.jsx';
+import Employment from './components/Employment/Employment.jsx'
+import Map from './components/Employment/Map.jsx'
 
-
-function App() {
-  // set up state 
-  // example - const[getter,setter] = useState(init);
-
-  // boolean to determine load status
-  const [aboutLoaded, setAboutLoaded] = useState(false);
-
-  // data object
-  const [about, setAbout] = useState();
-  const [title, setTitle] = useState('Oliver Institute of Technology')
-  // methods
-
-  // use effect is called after each re-render, inlcuding first render
-  // synchronize with outside data using fetch
-  useEffect(()=>{
-
-    getData('about/').then(
-      (json) => {
-        setAbout(json);
-        setAboutLoaded(true);
-      }
-    )
-
-    
-  }, [])
-
-  // app returns
-  if (!aboutLoaded) return (
-    // spinner
-    <>
-    <div className='stick'>
-      <h1>{title}</h1>
-      <p>you know how sticky it get</p>
-    </div>
-
-      <h1>LOADING...</h1>
-    </>
-  )
- return(
-  <>
-    <div className='stick'>
-      <h1>{title}</h1>
-      <p>you know how sticky it get</p>
-    </div>
-    <div className="App">
-      <About data={about}/>
-      {/* Enter Components Here */}
-
-      
-
-      <hr />
-      <Tabs />
-    </div>
-  </>
-
- ) 
+export default function App() {
+  return (
+    <MantineProvider>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="degrees" element={<Degrees />} />
+          <Route path="minors" element={<Minors />} />
+          <Route path="map" element={<Map/>}></Route>
+          <Route path="employment" element={<Employment />} />
+          <Route path="team" element={<Tabs />} />
+          {/* these last four are bonus */}
+          {/* <Route path="research" element={<Research />} /> */}
+          {/* <Route path="resources" element={<Resources />} /> */}
+          {/* <Route path="news" element={<News />} /> */}
+          {/* <Route path="courses" element={<Courses />} /> */}
+          {/* <Route path="maps" element={<Maps />} /> */}
+        </Route>
+      </Routes>
+      </MantineProvider>
+  );
 }
-
-export default App

@@ -3,13 +3,14 @@
 // 2nd server - https://ischool.gccis.rit.edu/api/
 
 const proxyServer = 'https://people.rit.edu/~dsbics/proxy/https://ischool.gccis.rit.edu/api/'
+const proxyServer2 = 'https://solace.ist.rit.edu/~dsbics/proxy/https://ischool.gccis.rit.edu/api/'
+const directServer = 'https://ischool.gccis.rit.edu/api/'
 
 // endpoint is something like 'about/', 'degrees/'
 async function getData(endpoint) {
     // concatenation
-    const result = await fetch(`${proxyServer}${endpoint}`)
+    const result = await fetch(`${proxyServer2}${endpoint}`)
     return await result.json();
 }
-
 
 export default getData;

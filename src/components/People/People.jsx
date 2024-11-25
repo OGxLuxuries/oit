@@ -1,4 +1,4 @@
-import {useState, useFffect, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import getData from '../utils/getData'
 import './People.css'
 
@@ -27,7 +27,6 @@ function People() {
 
      return (
         <>
-        DONE
         <h1>{peopleObj.title}</h1>
         <h2>{peopleObj.subtitle}</h2>
         <h3>Faculty</h3>

@@ -1,5 +1,5 @@
 import PeopleModal from "./PeopleModal";
-
+import './People.css';
 
 const PeopleGroup = ({title, obj}) => {
     return ( 
