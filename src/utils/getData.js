@@ -9,7 +9,7 @@ const directServer = 'https://ischool.gccis.rit.edu/api/'
 // endpoint is something like 'about/', 'degrees/'
 async function getData(endpoint) {
     // concatenation
-    const result = await fetch(`${proxyServer2}${endpoint}`)
+    const result = await fetch(`${proxyServer}${endpoint}`)
     return await result.json();
 }
 

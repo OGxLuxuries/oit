@@ -10,7 +10,7 @@ const PeopleGroup = ({title, obj}) => {
         {/* loopy doopdy */}
         {obj.map( (p) => 
         <div className="peopleListItem" key={p.username}>
-            <h3>{p.name}</h3>
+            
             <img src={p.imagePath} alt={`Picture of ${p.name}`} />
             <PeopleModal {...p} name={p.name}/>
         </div>

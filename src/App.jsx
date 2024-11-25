@@ -10,6 +10,7 @@ import { MantineProvider } from '@mantine/core';
 import Minors from './components/Minors/Minors.jsx';
 import Employment from './components/Employment/Employment.jsx'
 import Map from './components/Employment/Map.jsx'
+import ComingSoonPage from './components/ComingSoon/ComingSoon.jsx';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="employment" element={<Employment />} />
           <Route path="team" element={<Tabs />} />
           {/* these last four are bonus */}
+          <Route path="cs" element={<ComingSoonPage />} />
           {/* <Route path="research" element={<Research />} /> */}
           {/* <Route path="resources" element={<Resources />} /> */}
           {/* <Route path="news" element={<News />} /> */}

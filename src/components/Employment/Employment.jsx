@@ -81,7 +81,8 @@ if (!loaded)
   return (
     <>
     <div className="full-screen-width">
-    <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+      
+      <Paper sx={{ width: '50%', overflow: 'hidden' }}>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
@@ -90,7 +91,7 @@ if (!loaded)
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ minWidth: column.minWidth }}
+                  style={{ maxWidth: column.minWidth }}
                 >
                   {column.label}
                 </TableCell>
@@ -125,8 +126,9 @@ if (!loaded)
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
     </Paper>
+    
 
-<Paper sx={{ width: '100%', overflow: 'hidden' }}>
+<Paper sx={{ width: '50%', overflow: 'hidden' }}>
 <TableContainer sx={{ maxHeight: 440 }}>
   <Table stickyHeader aria-label="sticky table">
     <TableHead>
@@ -171,8 +173,10 @@ if (!loaded)
 />
 </Paper>
 
-    </div>
-    
+      </div>
+  
+
+       
 </>
   );
 }

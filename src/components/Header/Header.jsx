@@ -25,12 +25,12 @@ const links = [
     link: "#3",
     label: "More",
     links: [
-      { link: "/research", label: "Research" },
-      { link: "/resources", label: "Resources" },
-      { link: "/news", label: "News" },
+      { link: "/cs", label: "Research" },
+      { link: "/cs", label: "Resources" },
+      { link: "/cs", label: "News" },
     ],
   },
-  { link: "/enroll", label: "Enroll" },
+  { link: "/cs", label: "Enroll" },
   
   
   

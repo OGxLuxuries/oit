@@ -50,14 +50,14 @@ function Home() {
   )
  return(
   <>
+    <h1>Welcome to the Oliver Insitute of Technology!</h1>
+    <p>Home of the theorists, innovators, and trendsetters</p>
     
     <div className="App">
       <About data={about}/>
       {/* Enter Components Here */}
 
-      
-
-      <hr />
+    
       
     </div>
   </>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import getData from "../../utils/getData.js";
 import { Accordion } from '@mantine/core';
+import classes from './Degrees.module.css'
 
 export default function Degrees() {
   const [degreesObj, setDegreesObj] = useState();
@@ -51,6 +52,7 @@ export default function Degrees() {
       <Accordion.Control>{item.title}</Accordion.Control>
       <Accordion.Panel>
         <p>{item.description}</p>
+        <p>Concentrations: </p>
         {item.concentrations && (
           <ul>
             {item.concentrations.map((concentration, index) => (
@@ -71,18 +73,24 @@ export default function Degrees() {
   
       <div className="full-screen-width">
         <Accordion variant="separated" radius="xl" chevronPosition="left" defaultValue="Degree">
-        {undergradDegItems}
+          <div className={classes.accordionText}>
+          {undergradDegItems}
+          </div>
+        
       </Accordion>
+      <hr />
       <Accordion variant="separated" radius="xl" chevronPosition="left" defaultValue="Degree">
-        {gradDegItems}
+      <div className={classes.accordionText}>
+          {gradDegItems}
+          </div>
       </Accordion>
       
-      <div>
+      <div className={classes.certs}>
       {
         degreesObj.graduate.filter((item) => item.availableCertificates).map((item) => (
-          <div key={item.degreeName}>
+          <div  key={item.degreeName}>
           <h2>{item.degreeName}</h2>
-          <ul>
+          <ul className={classes.noBullet}>
             {item.availableCertificates.map((certificate, index) => (
               <li key={index}>{certificate}</li>
             ))}
